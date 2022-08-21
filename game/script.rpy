@@ -10,8 +10,10 @@ init:
 
     image bgNegro = Image("bgnegro.png")
     image carcel = Image("bgcarcel.jpg")
-    image salaHackeo = Image("bglab.jpg")  
-    image carcelHack = Image("bghack.jpg")  
+    image salaHackeo = Image("bghack.jpg")  
+    image carcelHack = Image("bglab.jpg") 
+    image goodEnding = Image("goodending.jpg")
+    image badEnding = Image("badending.png")
 
     #protagonista    
     image iSerio = Image("iserio2.png")
