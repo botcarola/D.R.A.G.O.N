@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 16: expected statement.
-    imge badEnding = Image("badending.png")
-                   ^
+File "game/script.rpy", line 3: expected statement.
+    from turtle import width
+                            ^
 
 Ren'Py Version: Ren'Py 8.0.2.22081402
-Sun Aug 21 18:00:19 2022
+Sun Aug 21 18:14:15 2022

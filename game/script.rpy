@@ -452,9 +452,11 @@ label escena102:
 
     hacker "Sácame ya, está colapsando."
 
-    return
+    jump badEnding
 
 label escena101:
+
+    stop sound
 
     scene bgcarcel with dissolve
 
@@ -486,9 +488,9 @@ label escena101:
 
     prisionero "Inténtalo de nuevo, no pierdas la oportunidad de cambiar al mundo y romper tus propias reglas. No podemos volver a cometer los mismos errores."
 
-    #escena bad badending
+    jump badending
 
-    return  
+return  
 
 label escena92:  
 
@@ -577,7 +579,7 @@ label escenario111:
             jump escena92
         
         "pr3s3rv4rL4sR3glas":
-            jump escena92
+            jump escena101
         
         "r0mp3rL4sR3glas":
             jump escenario120
@@ -598,19 +600,35 @@ label escenario120:
 
     hacker "404 está a salvo, ya podemos salir a la superficie"
 
-    hide holoContenta
+    hide holoContenta   
+
+    jump goodending
+
+return  
+
+label goodending:
+
+    play music "audio/goodEndingAudio.ogg"
+
+    scene goodEnding with dissolve
 
     ia "Quizás hayas podido romper las reglas y en el proceso salvar a la humanidad."
 
     ia "Todos deseamos un final feliz para las malas decisiones que la raza humana crea día a día, entre las redes y el abandono a la tierra."
 
-    ia "Siempre los errores se pueden volver a comenter, inclusive en una simulación tan simple como esta."
+    ia "Siempre los errores se pueden volver a cometer, inclusive en una simulación tan simple como esta."
 
-    ia "Navegante, nunca lo olvides, depende de ti romper las reclas, ahora ve afuera."
+    ia "Navegante, nunca lo olvides, depende de ti romper las reglas, ahora ve afuera."
 
-    #godending
+return
 
-return    
+label badending:
+
+    play music "audio/badEndingAudio.ogg"
+
+    scene badEnding with dissolve
+
+return 
 
 label escenaFinal:
 
@@ -622,7 +640,7 @@ label escenaFinal:
 
     ia "¡Atención!"
 
-    ia "Influencer404 da error en el reconocimiento de interfaz de la interfaz de acceso a Dragon"
+    ia "Influencer404 da error en el reconocimiento de la interfaz de acceso a D.R.A.G.0.N"
 
     hide iPreocupado
 
@@ -642,17 +660,15 @@ label escenaFinal:
 
     show iMiedo 
 
-    prisionero "¡NO!"   
-
-    #bad ending 
-
-    return
+    prisionero "¡NO!"  
+    
+return
 
 label escena52:
 
     play music "audio/confictoActo2.ogg"
 
-    scene bglab with dissolve
+    scene salaHackeo with dissolve
     
     show hMolesta 
 
